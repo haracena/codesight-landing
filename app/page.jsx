@@ -159,7 +159,7 @@ export default function Home() {
               style={{
                 clipPath: "polygon(0% 15%, 100% -40%, 100% 180%, 0% 5%)",
               }}
-              className="absolute top-[20%] left-0 h-full w-[100vw] -rotate-[0deg] translate-x-1/4 bg-white blur-[50px] bg-opacity-75"
+              className="absolute top-[20%] left-0 h-full w-[100vw] -rotate-[0deg] translate-x-1/4 bg-white blur-[100px] bg-opacity-75 mix-blend-plus-lighter"
             ></div>
           </div>
           <div className="py-16 px-12 self-center max-w-[600px] mx-auto text-neutral-950 font-normal text-lg text-center relative">
