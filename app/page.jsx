@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <nav className="py-6 px-16 fixed z-20 top-0 left-0 w-full flex justify-between bg-black animate-fade-down animate-once animate-duration-1000 animate-delay-500 animate-ease-in">
+      <nav className="py-6 px-16 fixed z-30 top-0 left-0 w-full flex justify-between bg-black animate-fade-down animate-once animate-duration-1000 animate-delay-500 animate-ease-in">
         <Image
           className="object-contain"
           src={"/assets/images/logo.webp"}
@@ -144,44 +144,35 @@ export default function Home() {
 
         <section
           className="relative overflow-hidden grid grid-cols-[1fr_1fr] bg-[linear-gradient(to_right,rgba(0,0,0,0.15),rgba(0,0,0,0.15)),url('/assets/images/bg-fixed.webp')]
- bg-no-repeat bg-cover bg-fixed"
+ bg-no-repeat bg-cover bg-fixed bg-center"
         >
-          <div className="flex justify-center relative">
+          {/* Brillo */}
+          <div className="h-[55%] w-[110vw] absolute -right-[5vw] top-1/2 -translate-y-[53%] -rotate-[4deg] bg-gradient-to-r from-white/25 to-white/90 blur-[25px] mix-blend-plus-lighter rounded-3xl"></div>
+          <div className="z-20 h-[30px] w-[110vw] absolute -right-[5vw] bottom-[25%] -translate-y-[50%] -rotate-[10deg] bg-gradient-to-r from-white/100 to-white/0 blur-[30px] rounded-3xl"></div>
+          <div className="z-20 h-[15px] w-[110vw] absolute -right-[5vw] bottom-[15%] -translate-y-[50%] -rotate-[10deg] bg-gradient-to-r from-cyan-400/100 to-cyan-400/0 blur-[20px] mix-blend-plus-lighter rounded-3xl"></div>
+          <div className="flex justify-center items-center relative max-h-[80vh]">
             <Image
-              className="drop-shadow-xl relative z-10 translate-y-[10%]"
-              // className="drop-shadow-[0px_0px_5px_#4deeea]"
+              className="drop-shadow-xl relative z-10 object-contain w-[650px] translate-y-[10%]"
               src={"/assets/images/person.webp"}
-              width={1372 / 2.6}
-              height={1974 / 2.6}
+              width={1372 * 2}
+              height={1974 * 2}
               alt="imagen persona usando visores de realidad virtual"
             />
-            <div
-              style={{
-                clipPath: "polygon(0% 15%, 100% -40%, 100% 180%, 0% 5%)",
-              }}
-              className="absolute top-[20%] left-0 h-full w-[100vw] -rotate-[0deg] translate-x-1/4 bg-white blur-[100px] bg-opacity-75 mix-blend-plus-lighter"
-            ></div>
           </div>
-          <div className="py-16 px-12 self-center max-w-[600px] mx-auto text-neutral-950 font-normal text-lg text-center relative">
-            {/* <div
-              style={{
-                clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 25%)",
-              }}
-              className="absolute top-0 right-0 h-full w-[90vw] -rotate-[0deg] translate-x-1/4 bg-white blur-[50px] bg-opacity-75"
-            ></div> */}
+          <div className="py-16 mb-16 px-12 self-center max-w-[600px] mx-auto text-black font-normal text-base text-center relative">
             <Image
               className="mb-8 relative"
               src={"/assets/images/logo-black.webp"}
               width={952 / 2}
               height={72 / 2}
-              alt="imagen persona usando visores de realidad virtual"
+              alt="logo codesight negro"
             />
-            <p className="mb-4 relative">
+            <p className="mb-4 relative z-20">
               Enfrenta el futuro con los ojos abiertos. Miramos más allá del
               horizonte digital para anticipar y adaptarnos a las evoluciones
               tecnológicas.
             </p>
-            <p className="relative">
+            <p className="relative z-20">
               Nuestra pasión por la innovación y la excelencia técnica nos
               convierte en tu aliado ideal para conquistar desafíos digitales y
               transformarlos en oportunidades de éxito.
