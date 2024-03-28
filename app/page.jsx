@@ -1,4 +1,10 @@
 import Image from "next/image";
+import ServicesTopFigure from "./components/ServicesTopFigure";
+import ServicesBottomFigure from "./components/ServicesBottomFigure";
+import AboutUsFigure from "./components/AboutUsFigure";
+import CodesightFigureEnd from "./components/CodesightFigureEnd";
+import CodesightFigureMiddle from "./components/CodesightFigureMiddle";
+import CodesightFigureStart from "./components/CodesightFigureStart";
 
 export default function Home() {
   return (
@@ -45,6 +51,7 @@ export default function Home() {
           />
         </header>
 
+        {/* About */}
         <section className="pt-28 pb-60 text-center overflow-hidden relative">
           <h1 className="mb-8 text-3xl tracking-[20px]">EXPERTOS DIGITALES</h1>
           <p className="max-w-[600px] mx-auto text-gray-800">
@@ -52,35 +59,27 @@ export default function Home() {
             calidad. Nuestra misión es impulsar el éxito en línea de nuestros
             clientes, desarrollando sitios y.
           </p>
-          <Image
+          <AboutUsFigure />
+          {/* <Image
             className="absolute bottom-0 translate-y-[75%] left-1/2 -translate-x-[60%]"
             src={"/assets/images/wave-about.webp"}
             width={948 / 1.5}
             height={1021 / 1.5}
             alt="figura"
-          />
+          /> */}
           <div
             style={{ clipPath: "ellipse(50% 50% at 50% 50%)" }}
             className="w-[60vw] h-[200px] absolute bottom-0 left-1/2 translate-y-[70%] -translate-x-1/2 bg-black rounded-full"
           ></div>
         </section>
 
-        <section className="pt-14 pb-44 bg-black text-white text-center relative">
-          <Image
-            className="absolute top-0 right-0 object-contain"
-            src={"/assets/images/wave-top-services.webp"}
-            width={536 / 2}
-            height={904 / 2}
-            alt="figura"
-          />
-
-          <Image
-            className="absolute bottom-16 left-16 object-contain"
-            src={"/assets/images/wave-bottom-services.webp"}
-            width={209 / 2}
-            height={165 / 2}
-            alt="figura"
-          />
+        {/* Services */}
+        <section
+          id="servicesSection"
+          className="pt-14 pb-40 bg-black text-white text-center relative overflow-hidden"
+        >
+          <ServicesTopFigure />
+          <ServicesBottomFigure />
           <h2 className="mb-24 text-4xl tracking-[20px] leading-relaxed">
             NUESTROS <br /> SERVICIOS
           </h2>
@@ -181,27 +180,30 @@ export default function Home() {
         </section>
 
         <section className="bg-black overflow-hidden relative">
-          <Image
+          {/* <Image
             className="absolute top-[40px] right-[47%] object-contain"
             src={"/assets/images/wave-codesight-start.webp"}
             width={233 / 2}
             height={202 / 2}
             alt="figura"
-          />
-          <Image
+          /> */}
+          {/* <Image
             className="absolute top-1 right-[20%] object-contain"
             src={"/assets/images/wave-codesight-middle.webp"}
             width={800 / 2.5}
             height={514 / 2.5}
             alt="figura"
-          />
-          <Image
+          /> */}
+          <CodesightFigureStart />
+          <CodesightFigureMiddle />
+          <CodesightFigureEnd />
+          {/* <Image
             className="absolute top-0 right-0 object-contain"
             src={"/assets/images/wave-codesight-end.webp"}
             width={528 / 2}
             height={1009 / 2}
             alt="figura"
-          />
+          /> */}
           <div className="max-w-screen-xl py-28 px-8 mx-auto z-10">
             <div className="mb-28 flex gap-4 justify-between">
               <Image
