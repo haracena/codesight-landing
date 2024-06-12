@@ -6,6 +6,7 @@ import CodesightFigureEnd from "./components/CodesightFigureEnd";
 import CodesightFigureMiddle from "./components/CodesightFigureMiddle";
 import CodesightFigureStart from "./components/CodesightFigureStart";
 import Brightness from "./components/Brightness";
+import TechMarquee from "./components/TechMarquee";
 
 export default function Home() {
   return (
@@ -43,7 +44,7 @@ export default function Home() {
         {/* About */}
         <section
           id="quienes-somos"
-          className="pt-24 pb-60 text-center overflow-hidden relative"
+          className="pt-24 pb-32 lg:pb-60 text-center overflow-hidden relative"
         >
           <h1 className="mb-8 text-3xl tracking-[20px]">EXPERTOS DIGITALES</h1>
           <p className="max-w-[600px] mx-auto text-gray-800">
@@ -54,7 +55,7 @@ export default function Home() {
           <AboutUsFigure />
           <div
             style={{ clipPath: "ellipse(50% 50% at 50% 50%)" }}
-            className="w-[60vw] h-[200px] absolute bottom-0 left-1/2 translate-y-[70%] -translate-x-1/2 bg-black rounded-full"
+            className="hidden lg:block w-[60vw] h-[200px] absolute bottom-0 left-1/2 translate-y-[70%] -translate-x-1/2 bg-black rounded-full"
           ></div>
         </section>
 
@@ -65,12 +66,12 @@ export default function Home() {
         >
           <ServicesTopFigure />
           <ServicesBottomFigure />
-          <h2 className="mb-24 text-4xl tracking-[20px] leading-relaxed">
+          <h2 className="mb-24 text-3xl lg:text-4xl tracking-[20px] leading-relaxed">
             NUESTROS <br /> SERVICIOS
           </h2>
-          <div className="grid grid-cols-2 justify-center gap-24 max-w-screen-lg mx-auto relative">
-            <div className="h-[1px] w-[66%] absolute top-1/2 left-1/2 -translate-x-1/2 bg-neutral-800"></div>
-            <div className="h-[1px] w-[25%] absolute top-1/2 left-1/2 -translate-x-1/2 rotate-90 bg-neutral-800"></div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 justify-center gap-24 max-w-screen-lg mx-auto relative">
+            <div className="hidden lg:block h-[1px] w-[66%] absolute top-1/2 left-1/2 -translate-x-1/2 bg-neutral-800"></div>
+            <div className="hidden lg:block h-[1px] w-[25%] absolute top-1/2 left-1/2 -translate-x-1/2 rotate-90 bg-neutral-800"></div>
             <div className="flex flex-col gap-4 items-center">
               <Image
                 className="mb-[26px] object-contain"
@@ -128,24 +129,21 @@ export default function Home() {
 
         <section
           id="objetivo"
-          className="py-4 relative overflow-hidden grid grid-cols-[1fr_1fr] bg-[linear-gradient(to_right,rgba(0,0,0,0.15),rgba(0,0,0,0.15)),url('/assets/images/bg-fixed.webp')]
+          className="py-4 relative overflow-hidden grid grid-cols-1 lg:grid-cols-[1fr_1fr] bg-[linear-gradient(to_bottom,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('/assets/images/bg-fixed.webp')] lg:bg-[linear-gradient(to_right,rgba(0,0,0,0.15),rgba(0,0,0,0.15)),url('/assets/images/bg-fixed.webp')]
  bg-no-repeat bg-cover bg-fixed bg-center"
         >
           {/* Brillo */}
           <Brightness />
-          {/* <div className="h-[55%] w-[110vw] absolute -right-[5vw] top-1/2 -translate-y-[53%] -rotate-[4deg] bg-gradient-to-r from-white/25 to-white/90 blur-[25px] mix-blend-plus-lighter rounded-3xl"></div>
-          <div className="z-20 h-[30px] w-[110vw] absolute -right-[5vw] bottom-[25%] -translate-y-[50%] -rotate-[10deg] bg-gradient-to-r from-white/100 to-white/0 blur-[30px] rounded-3xl"></div>
-          <div className="z-20 h-[15px] w-[110vw] absolute -right-[5vw] bottom-[15%] -translate-y-[50%] -rotate-[10deg] bg-gradient-to-r from-cyan-400/100 to-cyan-400/0 blur-[20px] mix-blend-plus-lighter rounded-3xl"></div> */}
           <div className="flex justify-center items-center relative max-h-[80vh]">
             <Image
-              className="drop-shadow-xl relative z-10 object-contain w-[650px] translate-y-[10%]"
+              className="hidden lg:block drop-shadow-xl relative z-10 object-contain w-[650px] translate-y-[10%]"
               src={"/assets/images/person.webp"}
               width={1372 * 2}
               height={1974 * 2}
               alt="imagen persona usando visores de realidad virtual"
             />
           </div>
-          <div className="py-16 mb-16 px-12 self-center max-w-[600px] mx-auto text-black font-normal text-base text-center relative">
+          <div className="py-16 mb-0 lg:mb-16 px-12 self-center max-w-[600px] mx-auto text-black font-normal text-base text-center relative">
             <Image
               className="mb-8 relative"
               src={"/assets/images/logo-black.webp"}
@@ -171,9 +169,9 @@ export default function Home() {
           <CodesightFigureMiddle />
           <CodesightFigureEnd />
           <div className="max-w-screen-xl py-28 px-8 mx-auto z-10">
-            <div className="mb-28 flex gap-4 justify-between">
+            <div className="mb-14 lg:mb-28 flex gap-4 justify-between">
               <Image
-                className="object-contain"
+                className="object-contain z-10 mx-auto lg:mx-0"
                 src={"/assets/images/logo.webp"}
                 width={1030 / 3}
                 height={78 / 3}
@@ -181,7 +179,7 @@ export default function Home() {
               />
             </div>
 
-            <div className="grid grid-cols-3 gap-16 text-gray-300 text-base leading-8 relative">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 text-gray-300 text-base leading-8 relative">
               <p className="">
                 <span className="font-bold text-white">
                   Enfoque Sostenible:{" "}
@@ -213,56 +211,24 @@ export default function Home() {
 
         <section id="stack" className="py-24">
           <h3 className="mb-16 text-3xl text-center">Stack Tecnológico</h3>
-          <div className="flex items-center justify-around">
-            <Image
-              src={"/assets/images/react.png"}
-              width={176}
-              height={61}
-              alt="logo react js"
-            />
-            <Image
-              src={"/assets/images/next.png"}
-              width={167}
-              height={100}
-              alt="logo next js"
-            />
-            <Image
-              src={"/assets/images/vue.png"}
-              width={166}
-              height={83}
-              alt="logo vue js"
-            />
-            <Image
-              src={"/assets/images/express.png"}
-              width={239}
-              height={86}
-              alt="logo express"
-            />
-            <Image
-              src={"/assets/images/laravel.png"}
-              width={222}
-              height={71}
-              alt="logo laravel"
-            />
-            <Image
-              src={"/assets/images/netcore.png"}
-              width={86}
-              height={86}
-              alt="logo .net core"
-            />
-          </div>
+          <TechMarquee />
         </section>
 
         <section
           id="contacto"
-          className="p-16 relative grid grid-cols-2 overflow-hidden gap-8 bg-[url(/assets/images/bg-form.webp)] bg-cover bg-no-repeat bg-center"
+          className="p-16 relative grid lg:grid-cols-2 overflow-hidden gap-8  bg-cover bg-no-repeat bg-center bg-[url(/assets/images/bg-form.webp)]"
         >
-          <video className="absolute top-0 left-0 w-full" loop muted autoPlay>
+          <video
+            className="absolute inset-0 w-full h-full object-fill"
+            loop
+            muted
+            autoPlay
+          >
             <source src="/assets/videos/video-form.webm" type="video/mp4" />
           </video>
-          <div className="flex z-10 justify-center flex-col gap-2 items-center text-white text-5xl text-pretty font-bold">
+          <div className="flex z-10 justify-center flex-col gap-2 items-center text-white text-center text-3xl lg:text-start lg:text-5xl text-pretty font-bold">
             <div className="max-w-[600px]">
-              <h3 className="text-start leading-snug">
+              <h3 className="leading-snug">
                 ¿Tienes un proyecto? Nos encantaría ayudarte.
               </h3>
             </div>

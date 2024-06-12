@@ -29,7 +29,7 @@ function CodesightFigureEnd() {
   return (
     <Image
       ref={figureEnd}
-      className="absolute top-0 -right-[200px] object-contain"
+      className="hidden lg:block lg:absolute top-0 -right-[200px] object-contain"
       src={"/assets/images/wave-codesight-end.webp"}
       width={528 / 2}
       height={1009 / 2}

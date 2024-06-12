@@ -29,7 +29,7 @@ function CodesightFigureStart() {
   return (
     <Image
       ref={figureMiddle}
-      className="absolute top-[40px] right-[33%] object-contain scale-50 opacity-25"
+      className="hidden lg:block lg:absolute top-[40px] right-[33%] object-contain scale-50 opacity-25"
       src={"/assets/images/wave-codesight-start.webp"}
       width={233 / 2}
       height={202 / 2}

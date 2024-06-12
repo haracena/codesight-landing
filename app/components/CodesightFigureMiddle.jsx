@@ -29,7 +29,7 @@ function CodesightFigureMiddle() {
   return (
     <Image
       ref={figureMiddle}
-      className="absolute top-1 right-[8%] object-contain scale-50 opacity-25"
+      className="hidden lg:block lg:absolute top-1 right-[8%] object-contain scale-50 opacity-25"
       src={"/assets/images/wave-codesight-middle.webp"}
       width={800 / 2.5}
       height={514 / 2.5}

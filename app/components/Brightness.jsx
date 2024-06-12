@@ -50,7 +50,7 @@ function Brightness() {
     <>
       <div
         ref={mainBrightness}
-        className="h-[55%] w-[110vw] absolute -right-[110vw] top-1/2 -translate-y-[53%] -rotate-[4deg] bg-gradient-to-r from-white/25 to-white/85 blur-[25px] mix-blend-plus-lighter rounded-3xl"
+        className="h-[100%] lg:h-[55%] w-[110vw] absolute -right-[110vw] top-1/2 -translate-y-[53%] -rotate-[4deg] bg-gradient-to-r from-white/25 to-white/85 blur-[25px] mix-blend-plus-lighter rounded-3xl"
       ></div>
       <div
         ref={whiteBrightness}

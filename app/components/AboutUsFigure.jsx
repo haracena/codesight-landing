@@ -29,7 +29,7 @@ function AboutUsFigure() {
   return (
     <div
       ref={figureBottom}
-      className="absolute pt-32 -z-10 mx-auto -bottom-[630px] left-1/2 -translate-x-[60%] opacity-25"
+      className="absolute pt-32 -z-10 mx-auto -bottom-[160%] lg:-bottom-[630px] left-1/2 -translate-x-[60%] lg:-translate-x-[60%] opacity-25"
     >
       <Image
         className=""
