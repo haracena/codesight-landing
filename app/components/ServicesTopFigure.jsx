@@ -29,7 +29,7 @@ function ServicesTopFigure() {
   return (
     <Image
       ref={figure}
-      className="absolute top-0 -right-[300px] scale-50 opacity-25 object-contain"
+      className="absolute top-0 hidden sm:block -right-[300px] scale-50 opacity-25 object-contain"
       src={"/assets/images/wave-top-services.webp"}
       width={536 / 2}
       height={904 / 2}

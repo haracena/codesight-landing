@@ -7,6 +7,7 @@ import CodesightFigureMiddle from "./components/CodesightFigureMiddle";
 import CodesightFigureStart from "./components/CodesightFigureStart";
 import Brightness from "./components/Brightness";
 import TechMarquee from "./components/TechMarquee";
+import Form from "./components/Form";
 
 export default function Home() {
   return (
@@ -16,9 +17,9 @@ export default function Home() {
           id="home"
           className="min-h-screen relative flex flex-col gap-4 justify-center items-center bg-black overflow-hidden"
         >
-          <div className="w-36 h-36 absolute top-[100px] left-16 rounded-full bg-gradient-to-b from-cyan-400 to-purple-500 z-10 blur-[100px] animate-fade animate-once animate-duration-1000 animate-delay-[1500ms]"></div>
+          <div className="w-36 h-36 absolute top-[100px] md:left-16 left-4 rounded-full bg-gradient-to-b from-cyan-400 to-purple-500 z-10 blur-[100px] animate-fade animate-once animate-duration-1000 animate-delay-[1500ms]"></div>
           <div className="w-[320px] h-[320px] absolute top-1/2 -translate-y-1/2 translate-x-[66%] right-0 rounded-full bg-gradient-to-b from-cyan-400 to-purple-500 z-10 blur-[100px] animate-fade animate-once animate-duration-1000 animate-delay-[1500ms]"></div>
-          <div className="mb-48 flex justify-center items-center flex-col z-10">
+          <div className="mb-48 p-8 flex justify-center items-center flex-col z-10">
             <Image
               className="object-contain animate-fade-down animate-once animate-duration-1000 animate-delay-500 animate-ease-in"
               src={"/assets/images/logo.webp"}
@@ -32,11 +33,19 @@ export default function Home() {
             </p>
           </div>
           <Image
-            className="absolute bottom-0 object-contain animate-fade-up animate-once animate-duration-1000 animate-delay-500 animate-ease-in"
+            className="absolute hidden sm:block bottom-0 object-contain animate-fade-up animate-once animate-duration-1000 animate-delay-500 animate-ease-in"
             src={"/assets/images/wave.webp"}
-            width={3458 / 2}
-            height={1270 / 2}
-            alt="Ilustración Olas futuristas"
+            width={1726}
+            height={635}
+            alt="Ilustración olas futuristas"
+            priority
+          />
+          <Image
+            className="absolute sm:hidden bottom-0 object-contain animate-fade-up animate-once animate-duration-1000 animate-delay-500 animate-ease-in"
+            src={"/assets/images/wave-mobile.webp"}
+            width={1726}
+            height={635}
+            alt="Ilustración olas futuristas"
             priority
           />
         </header>
@@ -66,7 +75,7 @@ export default function Home() {
         >
           <ServicesTopFigure />
           <ServicesBottomFigure />
-          <h2 className="mb-24 text-3xl lg:text-4xl tracking-[20px] leading-relaxed">
+          <h2 className="mb-24 text-3xl lg:text-4xl tracking-[20px] leading-relaxed relative z-10">
             NUESTROS <br /> SERVICIOS
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 justify-center gap-24 max-w-screen-lg mx-auto relative">
@@ -216,7 +225,7 @@ export default function Home() {
 
         <section
           id="contacto"
-          className="p-16 relative grid lg:grid-cols-2 overflow-hidden gap-8  bg-cover bg-no-repeat bg-center bg-[url(/assets/images/bg-form.webp)]"
+          className="py-16 px-4 sm:px-16 relative grid lg:grid-cols-2 overflow-hidden gap-8 bg-cover bg-no-repeat bg-center bg-[url(/assets/images/bg-form.webp)]"
         >
           <video
             className="absolute inset-0 w-full h-full object-fill"
@@ -227,57 +236,13 @@ export default function Home() {
             <source src="/assets/videos/video-form.webm" type="video/mp4" />
           </video>
           <div className="flex z-10 justify-center flex-col gap-2 items-center text-white text-center text-3xl lg:text-start lg:text-5xl text-pretty font-bold">
-            <div className="max-w-[600px]">
+            <div className="w-full sm:max-w-[600px]">
               <h3 className="leading-snug">
                 ¿Tienes un proyecto? Nos encantaría ayudarte.
               </h3>
             </div>
           </div>
-          <form className="p-16 z-10 max-w-[600px] flex flex-col gap-4 mx-auto bg-black rounded-2xl">
-            <p className="text-gray-200">Estoy interesado en...</p>
-            <div className="flex flex-wrap gap-4 text-gray-400">
-              <button className="py-2 px-4 border border-gray-400 rounded-lg transition-all duration-300 hover:text-white hover:border-white">
-                Desarrollo web
-              </button>
-              <button className="py-2 px-4 border border-gray-400 rounded-lg transition-all duration-300 hover:text-white hover:border-white">
-                Desarrollo aplicación
-              </button>
-              <button className="py-2 px-4 border border-gray-400 rounded-lg transition-all duration-300 hover:text-white hover:border-white">
-                Diseño UX/UI
-              </button>
-              <button className="py-2 px-4 border border-gray-400 rounded-lg transition-all duration-300 hover:text-white hover:border-white">
-                Branding / Multimedia
-              </button>
-              <button className="py-2 px-4 border border-gray-400 rounded-lg transition-all duration-300 hover:text-white hover:border-white">
-                Otros
-              </button>
-            </div>
-            <div className="mt-8 flex flex-col gap-8">
-              <input
-                className="px-1 py-2 bg-black border-b border-gray-400 text-white focus:outline-none focus:border-cyan-400 transition-all duration-300"
-                placeholder="Nombre"
-                type="text"
-                name="name"
-              />
-              <input
-                className="px-1 py-2 bg-black border-b border-gray-400 text-white focus:outline-none focus:border-cyan-400 transition-all duration-300"
-                placeholder="Email"
-                type="email"
-                name="email"
-              />
-              <textarea
-                placeholder="Cuéntanos de tu proyecto"
-                className="px-1 py-2 bg-black border-b border-gray-400 text-white focus:outline-none focus:border-cyan-400 transition-all duration-300"
-                name="propuesta"
-                id=""
-                cols="30"
-                rows="6"
-              ></textarea>
-              <button className="py-2 px-4 max-w-fit bg-gray-50 rounded-lg text-black font-bold transition-all duration-300 hover:bg-cyan-400 hover:text-white">
-                Enviar mensaje
-              </button>
-            </div>
-          </form>
+          <Form />
         </section>
       </main>
       <footer className="py-8 px-16 w-full flex justify-center bg-black">

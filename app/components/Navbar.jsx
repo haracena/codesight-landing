@@ -8,7 +8,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <nav className="py-6 px-16 fixed z-30 top-0 left-0 w-full flex justify-between items-center bg-black animate-fade-down animate-once animate-duration-1000 animate-delay-500 animate-ease-in">
+      <nav className="py-4 px-4 md:py-6 md:px-16 fixed z-30 top-0 left-0 w-full flex justify-between items-center bg-black bg-opacity-90 backdrop-blur-sm animate-fade-down animate-once animate-duration-1000 animate-delay-500 animate-ease-in">
         <ScrollLink
           className="transition-all duration-300 cursor-pointer"
           to="home"
@@ -80,7 +80,7 @@ function Navbar() {
             <li>Contacto</li>
           </ScrollLink>
         </ul>
-        <button onClick={() => setIsOpen(true)}>
+        <button className="md:hidden" onClick={() => setIsOpen(true)}>
           <RiMenu3Line className="text-white text-2xl" />
         </button>
       </nav>
@@ -92,11 +92,14 @@ function Navbar() {
       )}
 
       <ul
-        className={`flex flex-col gap-8 py-6 px-16 fixed top-0 h-screen min-w-[40vw] bg-black z-[60] transition-all duration-300 text-white items-end  ${
+        className={`flex flex-col gap-8 pb-4 pt-24 px-16 fixed top-0 h-screen min-w-[40vw] bg-black z-[60] transition-all duration-300 text-white items-end  ${
           isOpen ? "right-0" : "-right-[100%]"
         }`}
       >
-        <button onClick={() => setIsOpen(false)}>
+        <button
+          className="absolute top-4 right-4"
+          onClick={() => setIsOpen(false)}
+        >
           <RiCloseLine className="text-3xl" />
         </button>
 

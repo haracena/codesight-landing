@@ -29,7 +29,7 @@ function ServicesBottomFigure() {
   return (
     <Image
       ref={figureBottom}
-      className="absolute bottom-32 -left-[200px] scale-50 opacity-25 object-contain"
+      className="absolute bottom-32 hidden sm:block -left-[200px] scale-50 opacity-25 object-contain"
       src={"/assets/images/wave-bottom-services.webp"}
       width={209 / 2}
       height={165 / 2}
